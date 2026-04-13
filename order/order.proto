@@ -5,7 +5,6 @@ option go_package = "github.com/airlangga-hub/ecommerce-microservices-proto/gola
 message CreateOrderRequest {
   int64 user_id = 1;
   repeated Item items = 2;
-  double total_price = 3;
 }
 
 message Item {
