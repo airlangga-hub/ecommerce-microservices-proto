@@ -2,6 +2,11 @@
 SERVICE_NAME=$1
 RELEASE_VERSION=$2
 
+if [ ! -d "./${SERVICE_NAME}" ] || [ -z "$(ls ./${SERVICE_NAME}/*.proto 2>/dev/null)" ]; then
+  echo "No proto files found for ${SERVICE_NAME}. Skipping generation."
+  exit 0
+fi
+
 sudo apt-get install -y protobuf-compiler golang-goprotobuf-dev
 
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
