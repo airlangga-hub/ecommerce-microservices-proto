@@ -1,0 +1,1 @@
+Generated Golang source code for payment
