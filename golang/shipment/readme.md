@@ -1,1 +1,0 @@
-Generated Golang source code for shipment
