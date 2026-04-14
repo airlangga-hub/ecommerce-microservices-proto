@@ -25,7 +25,7 @@ type CreatePaymentRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	UserId        int64                  `protobuf:"varint,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 	OrderId       int64                  `protobuf:"varint,2,opt,name=order_id,json=orderId,proto3" json:"order_id,omitempty"`
-	TotalPrice    float32                `protobuf:"fixed32,3,opt,name=total_price,json=totalPrice,proto3" json:"total_price,omitempty"`
+	TotalPrice    float64                `protobuf:"fixed64,3,opt,name=total_price,json=totalPrice,proto3" json:"total_price,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -74,7 +74,7 @@ func (x *CreatePaymentRequest) GetOrderId() int64 {
 	return 0
 }
 
-func (x *CreatePaymentRequest) GetTotalPrice() float32 {
+func (x *CreatePaymentRequest) GetTotalPrice() float64 {
 	if x != nil {
 		return x.TotalPrice
 	}
@@ -141,7 +141,7 @@ const file_payment_payment_proto_rawDesc = "" +
 	"\x14CreatePaymentRequest\x12\x17\n" +
 	"\auser_id\x18\x01 \x01(\x03R\x06userId\x12\x19\n" +
 	"\border_id\x18\x02 \x01(\x03R\aorderId\x12\x1f\n" +
-	"\vtotal_price\x18\x03 \x01(\x02R\n" +
+	"\vtotal_price\x18\x03 \x01(\x01R\n" +
 	"totalPrice\"O\n" +
 	"\x15CreatePaymentResponse\x12\x1d\n" +
 	"\n" +
